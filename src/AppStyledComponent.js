@@ -40,6 +40,24 @@ const AppIntro = styled.p`
     font-size: 1.3rem;
   }
 `
+
+const Button = styled.button`
+  /* Adapt the colors based on primary prop */
+  background: ${props => props.primary ? "palevioletred" : "white"};
+  color: ${props => props.primary ? "white" : "palevioletred"};
+
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid palevioletred;
+  border-radius: 3px;
+`
+
+// A new component based on Button, but with some override styles
+const RedButton = styled(Button)`
+  color: tomato;
+  border-color: tomato;
+`
 function AppStyledComponent() {
   return (
     <AppWrapper>
@@ -53,6 +71,9 @@ function AppStyledComponent() {
       <AppIntro>
         Components styled with <code>styled-components</code>{' '}
       </AppIntro>
+      <Button>Normal Button</Button>
+      <RedButton>Red Button</RedButton>
+      <Button primary>Primary</Button>
     </AppWrapper>
   );
 }
