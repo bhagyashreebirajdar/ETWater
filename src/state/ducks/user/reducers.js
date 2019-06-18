@@ -6,3 +6,5 @@ const initialState = {};
 export const signInReducer = createReducer(initialState)({
 
 });
+
+export default signInReducer;

@@ -1,5 +1,8 @@
-import * as selectors from "./selectors";
-export { selectors };
+import reducer from "./reducers";
 
-export { default as createReducer } from "./createReducer";
-export { default as fetch } from "./fetch";
+import * as userActions from "./actions";
+import * as userSelectors from "./selectors";
+
+export { userActions, userSelectors };
+
+export default reducer;
